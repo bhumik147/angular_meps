@@ -1,0 +1,73 @@
+<!-- <h1 *ngFor="let email of emails">{{ email.body }}</h1> -->
+
+<form>
+  <div class="form-group form-inline">
+    <input
+      placeholder="Search email:"
+      class="form-control ml-2"
+      type="text"
+      [formControl]="filter"
+    />
+  </div>
+</form>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" *ngIf="getTab() == 'send' || getTab() == 'draft'">To</th>
+      <th scope="col" *ngIf="getTab() == 'inbox'">From</th>
+      <th scope="col" *ngIf="getTab() == 'delete'">User</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Body</th>
+      <th scope="col">Date</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let email of emails$ | async; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td *ngIf="getTab() == 'inbox'">
+        <ngb-highlight
+          [result]="email.from.user"
+          [term]="filter.value"
+        ></ngb-highlight>
+      </td>
+      <td *ngIf="getTab() == 'send' || getTab() == 'draft'">
+        <ngb-highlight
+          [result]="email.to.user"
+          [term]="filter.value"
+        ></ngb-highlight>
+      </td>
+      <td *ngIf="getTab() == 'delete'">
+        <ngb-highlight
+          [result]="filterDeletePageSendReceive(email.from.user)"
+          [term]="filter.value"
+        ></ngb-highlight>
+      </td>
+      <td>
+        <ngb-highlight
+          [result]="email.subject"
+          [term]="filter.value"
+        ></ngb-highlight>
+      </td>
+      <td>
+        <ngb-highlight
+          [result]="cleanHtml(email.body)"
+          [term]="filter.value"
+        ></ngb-highlight>
+      </td>
+      <td>
+        {{ email.date.seconds * 1000 | date: "dd-MM-yyyy" }}
+      </td>
+      <td>
+        <button
+          class="btn waves-effect waves-light red"
+          (click)="delete(email)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

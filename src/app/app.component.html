@@ -1,0 +1,8 @@
+<app-navigation></app-navigation>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+
+  
+  <ng-chat *ngIf="userId" [adapter]="adapter" [userId]="userId" [historyEnabled]="false" [fileUploadUrl]="'http://localhost:3000/uploadFile'" [theme]="'dark-theme'"></ng-chat>

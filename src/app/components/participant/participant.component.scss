@@ -1,0 +1,50 @@
+
+.image
+{
+    margin-top:0;
+    margin-bottom: 40px;
+    height: 42px;
+    width: 125px;
+    left: 0;
+    background-image: url("../../../assets/img/Participant.png"); 
+
+}
+.image:hover
+{
+    background-position: -126px 0;
+}
+.table
+{
+    width: 870px;
+    height: 1080px;
+}
+td, th 
+{
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+.table th, .table td
+{
+    border-top: none;
+    border-bottom:1px solid  #6e7783;
+}
+// .table td
+// {
+ 
+//     vertical-align: middle;
+// }
+.table-striped tbody tr:nth-of-type(odd)
+{
+    background-color: #f2e9e1;
+}
+
+// ===== button =======
+.btn, .btn-large, .btn-small
+{
+   color: #f2e9e1 ;
+   background-color: #6e7783 !important;
+   border-radius: 10px;
+}
