@@ -2,9 +2,9 @@
 {
 margin-top: 10px;
   height: 200px;
-  width: 940px;
-  background-color: #FAFAFA;
-  margin-left: 103px;
+  width: 100%;
+  background-color: #FFFAE8;
+  margin-left: 8%;
   box-shadow: 0 0 2px rgba(0, 0, 0, .3);
 }
 
@@ -13,7 +13,7 @@ input[type=text]
   margin-left: 20px;
   margin-top: 10px;
   border-bottom: none;
-  width: 600px;
+  width: 80%;
   word-break:break-all
 }
 ::placeholder
@@ -32,21 +32,15 @@ button[type="submit"]
   outline: none ;
   height: 40px;
   font-size: 18px;    
-  background: #c9d6de;
+  background: #FD999A;
   cursor: pointer;
-  color:  #6e7783;
+  color:  #FFFFFF;
   font-weight: bold;   
 }
 button[type="submit"]:hover
 {
-    background-color: #6e7783;
-    color:#f2e9e1;
-}
-
-
-.grey.lighten-5
-{
-  width: 82%;
+    background-color: #8ABBDB;
+    color:#FFFFFF;
 }
 
 * {
@@ -98,6 +92,15 @@ button[type="submit"]:hover
   font-size: 16px;
   margin: 4px 2px;
 }
+.card-panel
+{
+  background-color: #E1EEF6;
+  font-size: 20px;
+  width: 100%;
+}
+a{
+  color:#B1B6B8;
+}
 
 
 // ============= Adjust the Side-bar ===================================
@@ -117,34 +120,36 @@ button[type="submit"]:hover
   display: block;
   width: 60px;
   text-align: center;
-  height: 60px;
-  line-height: 60px;
-  background: #f1f1f1;
-  color: #b9b9b9;
-  font-size: 20px;
+  height: 55px;
+  line-height: 40px;
+  background: transition;
+  color: #454552;
+  font-size: 19px;
   transition: 0.6s;
 }
 .option:hover i{
-  color: #6F7784;
+
+  color: #FD999A;
 }
 .text{
   position: absolute;
   height: 60px;
   width: 120px;
-  background: #6F7784;
+  background:  transition;
   top: 0;
   z-index: -1;
   left: -140px;
-  color: #f2e9e1;
-  line-height: 60px;
+  color: #454552;
+  line-height: 40px;
   text-align: center;
   transition: 0.6s;
+  font: bold;
 }
 option.a{
   position: absolute;
   height: 60px;
   width: 120px;
-  background: #6F7784;
+  background: #454552;
   top: 0;
   z-index: -1;
   left: -140px;
@@ -152,8 +157,13 @@ option.a{
   line-height: 60px;
   text-align: center;
   transition: 0.6s;
+  font: bold;
 }
 
 .option:hover .text{
-  left: 60px;
+  left: 40px;
 }
+
+
+
+  

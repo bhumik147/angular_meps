@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<body>
 
 <div class="row mt-4">
 
@@ -13,7 +14,7 @@
                 <div class="input-wrapper" *ngIf="user.rolePosition == 'admin'">
                     <input [(ngModel)]="scenario.content" name="content" type="text" class="form-control" id="content" placeholder="Add the next scenario task for the students!!!">
                     <div class="col-md-12">
-                           <button type="submit">Post Scenario</button>
+                           <button  type="submit">Post </button>
                     </div>
                 </div>
             </div>
@@ -26,9 +27,9 @@
     <div class="col-1">
     </div>
     <div class="col-11">
-        <div class="card-panel green lighten-2 z-depth-1">
+        <div class="card-panel">
             <div class="card-content">
-                <p class="white-text" style="font-family:Georgia"><i>{{scenario.content}}</i></p>
+                <p class="black-text" style="font-family:Georgia"><i>{{scenario.content}}</i></p>
             </div>
             <div class="card-action">
                 <a href="#">{{scenario.date.toDate() | date: 'medium'}}</a>
@@ -36,6 +37,7 @@
         </div>
     </div>
 </div>
+
 
 
    <!-- set a side bar -->
@@ -46,6 +48,17 @@
         <i class="fa fa-home"></i>
         <a class="text" href="#">Home</a>              
     </div>
+
+    <div class="option">
+        <i class="fas fa-book-open"></i>
+        <a class="text" href="scenario">Scenario</a>              
+    </div>
+
+    <div class="option">
+        <i class="fas fa-user-alt"></i>
+        <a class="text" href="RolePage">Role</a>              
+    </div>
+
 
     <div class="option">
         <i class="fa fa-envelope" ></i>   

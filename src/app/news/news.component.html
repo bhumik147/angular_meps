@@ -116,12 +116,12 @@
             <img src="assets/img/roles/bahrain_king.jpg" alt="" class="circle responsive-img role-img">
         </div>-->
         <div class="col-11">
-            <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="card-panel ">
                 <div class="card-content">
                     <p class="h1">{{ newsClass.newsHeadline }}</p>
                     <p class="grey-text" >{{newsClass.userRole}} ({{newsClass.userName}})</p>
                     <div class="card-action">
-                        <a href="#">{{newsClass.newsDate.toDate() | date: 'medium'}}</a>
+                        <a>{{newsClass.newsDate.toDate() | date: 'medium'}}</a>
                     </div>
                    <!-- <p class="deep-purple-text" *ngIf="user.rolePosition === 'admin'">{{newsClass.firstName}} {{newsClass.lastName}}</p>-->
                     <p class="black-text">{{newsClass.newsDescription}}</p>
@@ -146,6 +146,7 @@
         </div>
         </form>-->
 
+
    <!-- set a side bar -->
 
 
@@ -154,6 +155,17 @@
         <i class="fa fa-home"></i>
         <a class="text" href="#">Home</a>              
     </div>
+
+    <div class="option">
+        <i class="fas fa-book-open"></i>
+        <a class="text" href="scenario">Scenario</a>              
+    </div>
+
+    <div class="option">
+        <i class="fas fa-user-alt"></i>
+        <a class="text" href="RolePage">Role</a>              
+    </div>
+
 
     <div class="option">
         <i class="fa fa-envelope" ></i>   
@@ -184,6 +196,3 @@
     </div>
 
   </div>
-
-
-</body>

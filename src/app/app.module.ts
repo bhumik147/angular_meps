@@ -31,10 +31,12 @@ import { AffiliateComponent } from "./components/affiliate/affiliate.component";
 import { AffiliateAddComponent } from "./components/affiliate-add/affiliate-add.component";
 import { TweetComponent } from "./components/tweet/tweet.component";
 
+
 import { AffiliateService } from "./services/affiliate.service";
 import { AuthService } from "./services/auth.service";
 import { ParticipantService } from "./services/participant.service";
 import { RoleService } from "./services/role.service";
+
 
 /*
  * All imports for emails including services and external componenets
@@ -50,10 +52,13 @@ import { EmailService } from "./services/email.service";
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DiaryComponent } from './diary/diary.component';
+import { RolePageComponent } from './RolePage/RolePage.component';
+import { roleProfile1Component} from './RolePage/roleProfile-1/roleProfile1.component';
 import { NgChatModule } from 'ng-chat';
 import { HttpModule } from '@angular/http';
 
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 
@@ -86,6 +91,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     EmailListComponent,
     ProfileComponent,
     DiaryComponent,
+    RolePageComponent,
+    StatisticsComponent,
+    roleProfile1Component
   ],
   imports: [
     BrowserModule,
